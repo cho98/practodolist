@@ -3,7 +3,7 @@ import Router from "./shared/Router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import styled from "styled-components";
-import "./App.css";
+import "./App.scss";
 
 const queryClient = new QueryClient();
 
