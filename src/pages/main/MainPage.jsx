@@ -1,12 +1,16 @@
 import React from "react";
 import Statusappbar from "../../components/layout/Statusappbar";
 import { Calender } from "../../components/mainpages/calender/Calender";
-
+import Todolist from "../../components/mainpages/todolist/Todolist";
+import "./Main.scss";
 const MainPage = () => {
   return (
     <div>
       <Statusappbar />
-      <Calender />
+      <div className="first">
+        <Calender />
+        <Todolist />
+      </div>
     </div>
   );
 };
