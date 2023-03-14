@@ -88,6 +88,7 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
         {days}
       </div>
     );
+
     days = [];
   }
   return <div className="body">{rows}</div>;

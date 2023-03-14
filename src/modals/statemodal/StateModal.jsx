@@ -1,6 +1,5 @@
 import React from "react";
 import "./StateModal.scss";
-import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 const StateModal = ({ setModalOpen }) => {
@@ -12,7 +11,11 @@ const StateModal = ({ setModalOpen }) => {
     <div className="container">
       <AiOutlineClose className="close" size="24" onClick={closeModal} />
 
-      <p>모달창입니다.</p>
+      <p>모달창니다.</p>
+      <div className="profileform">
+        <div className="imageform" />
+      </div>
+      <div className="modalcontent"></div>
     </div>
   );
 };

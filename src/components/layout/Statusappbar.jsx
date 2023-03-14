@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import Weather from "../../weather/Weather";
 import styled from "styled-components";
 
 const Statusappbar = () => {
+  const [timer, setTimer] = useState("00:00:00");
+
+  const currentTimer = () => {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    setTimer(`${hours}:${minutes}:${seconds}`);
+  };
+  const startTimer = () => {
+    setInterval(currentTimer, 1000);
+  };
+
+  startTimer();
   return (
     <Stappbar>
       <Sttitlediv>
+        <StTimer>{timer}</StTimer>
         <Sttitle> TodoList </Sttitle>
+        <Weather />
       </Sttitlediv>
     </Stappbar>
   );
@@ -23,8 +40,8 @@ const Stappbar = styled.div`
 
 const Sttitle = styled.span`
   display: flex;
-  margin: 0 auto;
   padding-top: 15px;
+  margin-left: 420px;
   font-family: "NeoDunggeunmoPro-Regular";
   font-weight: 1000;
   font-size: 28px;
@@ -33,7 +50,18 @@ const Sttitle = styled.span`
 `;
 
 const Sttitlediv = styled.div`
-  height: 45px;
-  width: 100px;
+  height: 65px;
+  width: 1100px;
   margin: 0 auto;
+
+  display: flex;
+`;
+
+const StTimer = styled.div`
+  padding-top: 22px;
+  width: 100px;
+  height: 30px;
+  font-family: "NeoDunggeunmoPro-Regular";
+  font-size: 28px;
+  float: left;
 `;

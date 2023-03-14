@@ -59,7 +59,7 @@
       height: 40px;
       width: 86px;
       font-family: "DotGothic16";
-      background: transparentize($color: rgb(128, 172, 85), $amount: 0);
+      background: transparentize($color: rgb(169, 190, 148), $amount: 0);
       border-left: 1px solid beige;
       border-right: 1px solid beige;
       border-radius: 5px;
@@ -84,6 +84,7 @@
         border: 0.4px solid transparentize(rgb(193, 211, 175), 0.4);
         border-radius: 10px;
         font-size: 0.8em;
+
         span {
           margin: 4px 0 0 4px;
         }
