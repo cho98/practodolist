@@ -1,14 +1,27 @@
 import React from "react";
 import "./TodoStyled.scss";
-import writeIcon from "../../../asset/icon/writeIcon.svg";
+import StateModal from "../../../modals/statemodal/StateModal";
+import { AiOutlineEdit } from "react-icons/ai";
+import { useState } from "react";
 
 const Todolist = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <div className="calendertodo">
       <div className="mantitle">
         <div className="manname">
-          형준
-          <image src={writeIcon} />
+          <span>형준</span>
+          <div>
+            <div className="editicon" onClick={showModal}>
+              <AiOutlineEdit size="21" float="right" />
+            </div>
+            {modalOpen && <StateModal setModalOpen={setModalOpen} />}
+          </div>
         </div>
 
         <div className="mancontent">

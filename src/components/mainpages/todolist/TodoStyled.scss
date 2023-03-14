@@ -16,15 +16,23 @@
       margin-left: 7px;
       margin-top: 10px;
       width: 200px;
-      border: 1px solid black;
+      span {
+        display: flex;
+        float: left;
+        width: 40px;
+        height: 20px;
+        margin-top: 2px;
+      }
+      .editicon {
+        display: flex;
+        height: 22px;
+        width: 22px;
+        margin: 0 auto;
+        margin-left: 175px;
+        cursor: pointer;
+      }
     }
-    image {
-      display: flex;
-      width: 50px;
-      height: 50px;
-      border: 1px solid black;
-      color: blue;
-    }
+
     .mancontent {
       margin-top: 10px;
       width: 220px;
