@@ -14,7 +14,7 @@
   .profileform {
     width: 290px;
     height: 130px;
-
+    border: 1px solid black;
     .imageform {
       width: 100px;
       height: 100px;
@@ -27,9 +27,14 @@
   }
   .modalcontent {
     width: 290px;
-    height: 130px;
+    height: 140px;
     border: 1px solid black;
-    margin-top: 50px;
+    div {
+      font-size: 20px;
+      height: 20px;
+      width: 290px;
+      margin-top: 13px;
+    }
   }
   .close {
     position: absolute;

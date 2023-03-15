@@ -15,7 +15,11 @@ const StateModal = ({ setModalOpen }) => {
       <div className="profileform">
         <div className="imageform" />
       </div>
-      <div className="modalcontent"></div>
+      <div className="modalcontent">
+        <div>기분: 좋아요</div>
+        <div>몸무게: 60kg</div>
+        <div>일일목표: 공부</div>
+      </div>
     </div>
   );
 };
