@@ -1,8 +1,8 @@
 import React from "react";
-import "./StateModal.scss";
+import "./CalenderModal.scss";
 import { AiOutlineClose } from "react-icons/ai";
 
-const StateModal = ({ setModalOpen }) => {
+const CalenderModal = ({ setModalOpen }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
@@ -22,4 +22,4 @@ const StateModal = ({ setModalOpen }) => {
   );
 };
 
-export default StateModal;
+export default CalenderModal;

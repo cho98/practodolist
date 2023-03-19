@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify";
 import { format, addMonths, subMonths } from "date-fns";
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from "date-fns";
 import { isSameMonth, isSameDay, addDays, parse } from "date-fns";
+import CalenderModal from "../../../modals/calendermodal/CalenderModal";
 import "./Styled.scss";
 
 const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
@@ -47,6 +48,11 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
   const startDate = startOfWeek(monthStart);
   const endDate = endOfWeek(monthEnd);
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   const rows = [];
   let days = [];
   let day = startDate;
@@ -84,8 +90,11 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
       day = addDays(day, 1);
     }
     rows.push(
-      <div className="row" key={day}>
-        {days}
+      <div>
+        <div className="row" key={day} onClick={showModal}>
+          {days}
+        </div>
+        {modalOpen && <CalenderModal setModalOpen={setModalOpen} />}
       </div>
     );
 

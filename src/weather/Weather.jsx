@@ -8,7 +8,6 @@ const Weather = () => {
   const [weather, setWeather] = useState();
 
   function handleGeoSucc(position) {
-    console.log(position);
     const latitude = position.coords.latitude; // 경도
     const longitude = position.coords.longitude; // 위도
     const coordsObj = {
@@ -33,7 +32,6 @@ const Weather = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         const temp = data.main.temp;
         const weathers = data.weather[data.weather.length - 1];
         setTemp(temp);
