@@ -10,13 +10,12 @@ const CalenderModal = ({ setModalOpen }) => {
   return (
     <div className="container">
       <AiOutlineClose className="close" size="24" onClick={closeModal} />
-      <p>모달창니다.</p>
+      <div> 3월 25일(날씨)</div>
       <div className="profileform">
         <div className="imageform" />
       </div>
       <div className="modalcontent">
-        <div>기분: 좋아요</div>
-        <div>일일목표: 공부</div>
+        <div>일정</div>
       </div>
     </div>
   );
